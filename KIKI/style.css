@@ -1,0 +1,125 @@
+.image__cover {
+  position: relative;
+}
+.image__cover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.678), rgba(0, 0, 0, 0.568)),
+    url("https://scontent.fbkk2-8.fna.fbcdn.net/v/t1.6435-9/133594878_1564326640439054_742908309593362219_n.jpg?_nc_cat=103&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeEllq0CmRN80AgbUtrmq-3v1Vn9DVoayqDVWf0NWhrKoIq_Jc8N0Bca0o018SUab41jpkArbRlW_U3U0K7-v2zh&_nc_ohc=wHunSEfcnasAX-aZVS5&tn=toJFoftDMBhQm8bk&_nc_pt=1&_nc_ht=scontent.fbkk2-8.fna&oh=00_AT9j1QGGC8cGMhqApOL4gclDVP8uSKlmkSF6rIOH0w4m-g&oe=61DCA391");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  background-attachment: fixed;
+}
+.image__cover-header {
+  color: #fff;
+  z-index: 1;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation-name: moveFromLeft;
+  animation-duration: 5s;
+  font-size: 50px;
+}
+
+@keyframes moveFromLeft {
+  0% {
+    opacity: 0;
+    transform: translate(-100%, -50%);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.arrow-wrap {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  -webkit-animation: arrow 0.5s 1s infinite ease-out alternate;
+  -moz-animation: arrow 0.5s 1s infinite ease-out alternate;
+  -o-animation: arrow 0.5s 1s infinite ease-out alternate;
+  animation: arrow 0.5s 1s infinite ease-out alternate;
+  width: 56px;
+}
+
+.arrow-wrap:hover {
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  -o-animation-play-state: paused;
+  animation-play-state: paused;
+}
+
+.arrow {
+  padding: 15px;
+  border-left: solid 5px #ffffff;
+  border-bottom: solid 5px #ffffff;
+  position: relative;
+  display: inline-block;
+  margin: 20px;
+}
+
+.arrow-down {
+  transform: rotate(-45deg);
+  bottom: 20px;
+  margin-top: -45px;
+}
+
+@-webkit-keyframes arrow {
+  0% {
+    bottom: 0px;
+  }
+  100% {
+    bottom: 10px;
+  }
+}
+
+@-moz-keyframes arrow {
+  0% {
+    bottom: 0px;
+  }
+  100% {
+    bottom: 10px;
+  }
+}
+
+@-o-keyframes arrow {
+  0% {
+    bottom: 0px;
+  }
+  100% {
+    bottom: 10px;
+  }
+}
+
+@keyframes arrow {
+  0% {
+    bottom: -100px;
+  }
+  100% {
+    bottom: -90px;
+  }
+}
+
+.floor {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 96px;
+  background-color: #ffffff;
+}
+.woot-dance {
+  position: fixed;
+  bottom: 0;
+  transform: translateX(-100px);
+  animation: dance linear 10s infinite alternate;
+}
+@keyframes dance {
+  0% {
+    transform: translateX(-100px);
+  }
+  100% {
+    transform: translateX(calc(100vw - (290px)));
+  }
+}
